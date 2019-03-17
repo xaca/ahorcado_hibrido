@@ -1,11 +1,11 @@
-# ahorcado_hibrido
+# Pasos para la construcción de una aplicación híbrida
 Hangman game for mobile, was developed using web tools like html, css and javascript. This project wants to show how to develope, improve and publish the aplication like an andorid app using cordova.
 
 ## Pasos para la creación de una aplicación híbrida  
 
 1. Creación de la estructura básica de un proyecto web. (commit 2)  
 
- > /--|
+ > /--|  
  >  &nbsp;&nbsp;&nbsp;&nbsp;|--/imgs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(a)  
  >  &nbsp;&nbsp;&nbsp;&nbsp;|--/js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b)  
  >  &nbsp;&nbsp;&nbsp;&nbsp;|--/css &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(c)  
