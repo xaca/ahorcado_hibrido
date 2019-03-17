@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.min.css" />
+    <meta charset="utf-8">
+</head>
+<body>
+<div data-role="page" id="splash">
+	<div data-role="content" style="text-align:center;">
+    <img src="imgs/splash.jpg" />
+    <a href="#home" data-role="button">Empezar a jugar</a>	
+    </div>
+</div>
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+	<!--<div data-role="header"><h1>Seleccione la categoria</h1></div>--><!-- /header -->
+
+	<div data-role="content">	
+		
+		<div class="content-primary">	
+		<ul data-role="listview">
+			<li>
+            <a href="javascript:initGame(0);">
+				<img src="imgs/Olimpic-Movement-icon.png"/><h3>Deportes</h3>
+				<!--<p>Adivina nombres de deportes</p>-->
+			</a>
+            </li>
+            <li>
+            <a href="javascript:initGame(1);">
+				<img src="imgs/document-music-icon.png"/>
+				<h3>Grupos de rock</h3>
+				<!--<p>Adivina nombres de grupos de rock latinos</p>-->
+			</a>
+            </li>
+            <li>
+            <a href="javascript:initGame(2);">
+				<img src="imgs/globe-Vista-icon.png"/>
+				<h3>Paises</h3>
+				<!--<p>Adivina nombres de paises latinoamericanos</p>-->
+			</a>
+            </li>
+            <li>
+            <a href="javascript:initGame(3);">
+				<img src="imgs/fruits-icon.png"/>
+				<h3>Frutas</h3>
+				<!--<p>Adivina nombres de frutas exoticas</p>-->
+			</a>
+            </li>   
+             <li>
+            <a href="javascript:initGame(4);">
+				<img src="imgs/Cinema-icon.png"/>
+				<h3>Peliculas</h3>
+				<!--<p>Adivina nombres de peliculas</p>-->
+			</a>
+            </li>
+             <li>
+            <a href="javascript:initGame(5);">
+				<img src="imgs/oscar-icon.png"/>
+				<h3>Actores</h3>
+				<!--<p>Adivina nombres de autores</p>-->
+			</a>
+            </li>
+         </ul>
+         </div>	
+	</div><!-- /content -->
+
+	<!--<div data-role="footer"><h4>Seleccione la categoria</h4></div>--><!-- /footer -->
+</div><!-- /page -->
+
+
+<!-- Start of second page -->
+<div data-role="page" id="game">
+
+	<!--<div data-role="header"><h1>Juego</h1></div>--><!-- /header -->
+	<div data-role="content">	
+		
+        <!-- Juego -->
+       <div id="contenedorJuego">
+           <div id="teclado"></div>    
+           <div id="palabra"></div>
+           <table align="center">
+           <tr>
+           <td>
+                <div id="hangman"></div>
+           </td>
+           <td>
+                <a href="#home"><img src="imgs/home.png" /></a>
+            </td>
+           </tr>
+           <tr>
+            <td colspan="2">
+                <p id="puntaje"></p>
+            </td> 
+            </tr>
+           </table>
+       </div>       
+        <!--<p><a href="javascript:void(0);" onClick="cerrarVentana();" >Cerrar</a>
+          <a href="javascript:void(0);" onClick="abrirVentana();" >Abrir</a>
+        </p>-->
+       
+        <!-- Juego -->
+		
+	</div><!-- /content -->
+
+	<!--<div data-role="footer"><h4>Juego</h4></div>--><!-- /footer -->
+</div><!-- /page -->
+<script src="js/jquery-1.6.4.min.js"></script>
+<script src="js/jquery.mobile-1.0.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
