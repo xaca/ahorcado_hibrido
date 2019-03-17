@@ -5,11 +5,11 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
 
 1. Creación de la estructura básica de un proyecto web. (commit 2)  
 
-    .../--|    
-          |--/imgs   (a)  
-          |--/js     (b)  
-          |--/css    (c)  
-           index.html (d)  
+    >   /--|    
+    >      |--/imgs   (a)  
+    >      |--/js     (b)  
+    >      |--/css    (c)  
+    >       index.html (d)  
 
    - (a) Carpeta donde se guardaran los insumos gráficos (jpg, gif, png, svg)  
    - (b) Carpeta donde se guardaran los archivos de javascript, el archivo base se recomienda llamarlo main.js  
