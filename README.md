@@ -45,7 +45,26 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
     ```
 6. Crear proyecto de cordova
 
+    > cordova create aplicacion co.edu.proyecto Aplicacion
 
+7. Mueva el proyecto de cordova a la raíz del proyecto y borre la carpeta aplicacion
+
+    ```sh
+    mv aplicacion/* ./
+    rm -rf aplicacion
+    ```
+8. Borre el contenido de la carpeta www
+
+    ```sh
+    rm -rf ./www/*
+    ```
+
+9. Mueva los archivos de temp para la carpeta www de la nueva estructura de archivos creada y borre la carpeta temp
+
+    ```sh
+    mv ./temp/* ./www/
+    rm -rf temp
+    ```
 
 [Node js]:https://nodejs.org/es/
 [Visual Studio Code]:https://code.visualstudio.com/
