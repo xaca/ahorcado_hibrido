@@ -83,9 +83,9 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
 
     Cuando el dispositivo esta conectado aparece algo similar a esto:
 
-    |                 List od devices attached                    |
-    |-------------------------------|-----------------------------|
-    |192.168.50.101:5555            |device                       |
+    |                 List od devices attached                    |  
+    |-------------------------------|-----------------------------|  
+    |192.168.50.101:5555            |device                       |  
 
 14. Si no aparece el dispositivo en la lista, probar conectando y desconectando el celular o reiniciando el adb
 
