@@ -140,11 +140,11 @@ El archivo **release-signing.properties**
 
 Incluir la siguiente configuración:
 
-    storeFile=../../llave/ahorcado_hibrido.keystore  
+    storeFile=ruta_almacen_llaves.keystore  
     storeType=jks  
-    keyAlias=hibrido  
-    keyPassword=password  
-    storePassword=password  
+    keyAlias=alias_de_la_aplicacion  
+    keyPassword=clave_llave  
+    storePassword=lave_almacenamiento_llave  
 
 3. Crear el apk usando el modo release, así:
 
