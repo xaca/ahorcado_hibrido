@@ -140,7 +140,7 @@ El archivo **release-signing.properties**
 
 Incluir la siguiente configuración:
 
-    > storeFile=../../llave/ahorcado_hibrido.keystore  
+    storeFile=../../llave/ahorcado_hibrido.keystore  
     storeType=jks  
     keyAlias=hibrido  
     keyPassword=password  
