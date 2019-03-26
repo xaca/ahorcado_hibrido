@@ -1,5 +1,7 @@
 /node_modules
-/plaftforms
+/platforms/*
 /res
 /plugins
 /hooks
+/llave
+/.idea

@@ -22,7 +22,7 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
     + [Visual Studio Code] para editar los archivos  
     + [Cordova] Este es un paquete que se instala usando npm  
     + [Android Studio] No usarmeos directamente android studio, pero si muchas herramientas que se instalan cuando se configura esta aplicación.   
-    + [SDK platform tools] Herramientas adicionales para publicar y probar la aplicación y asigne la carpeta a las variables de entorno *[Pendiente de realizar manual]* 
+    + [SDK platform tools] Herramientas adicionales para publicar y probar la aplicación. Asigne la carpeta a las variables de entorno *[Pendiente de realizar manual]* 
     + [Git bash] Para usar git y poder escribir comandos básicos de unix en linux  
     + [Genymotion] emulador para probar las aplicaciones en el escritorio, esta optimizado y funciona mejor que el que trae android studio  
     + Driver del telefono celular andorid que va a usar (Ej. kies de samsung)
@@ -47,7 +47,9 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
     ```
 6. Crear proyecto de cordova
 
-    > cordova create aplicacion co.edu.proyecto Aplicacion
+    ```sh
+    cordova create aplicacion co.edu.proyecto Aplicacion
+    ```
 
 7. Mueva el proyecto de cordova a la raíz del proyecto y borre la carpeta aplicacion
 
@@ -69,17 +71,23 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
     ```
 10. Agregar la plataforma de prueba de android, esto sirve para crear el archivo ejecutable apk.
 
-    > cordova platform add android
+    ```sh 
+    cordova platform add android
+    ```
 
 11. Crear el build o sea el ejecutable de android apk
 
-    > cordova build android
+    ```sh 
+    cordova build android
+    ```
 
 12. Conectar el celular en modo desarrollador y con la opción de USB activada o lanzar el emulador desde genymotion.
 
 13. Validar con la herramienta [adb], si el dispositivo esta en la lista de elementos reconocidos
 
-    > adb devices
+    ```sh 
+    adb devices
+    ```
 
     Cuando el dispositivo esta conectado aparece algo similar a esto:
 
@@ -90,8 +98,60 @@ Hangman game for mobile, was developed using web tools like html, css and javasc
 
 14. Si no aparece el dispositivo en la lista, probar conectando y desconectando el celular o reiniciando el adb
 
-    > adb kill-server
-    > adb start-server
+    ```sh 
+    adb kill-server
+    adb start-server
+    ```
+
+## Firma de la aplicación para subirla a google pla developer console
+
+Recuerde que la llave con la cual se firma la aplicación debe ser la misma con la cual se firma siempre durante la vida útil de la aplicación, por tanto debe cuidar muy bien la llave, para poder actualizar la aplicación.
+
+1. Crear la llave para firmar la aplicación, tener en cuenta los siguientes datos:  
+
+**nombre_almacenamiento_llave.keystore** Nombre del archivo que guardará las llaves  
+**alias_de_la_aplicacion** Nombre corto o apodo de la aplicación  
+**clave_almacenamiento_llave** Clave del almacen  
+**clave_llave** Clave de la llave  
+
+```sh
+keytool -genkey -v -keystore nombre_almacenamiento_llave.keystore -alias aplicacion_hibrida -keyalg RSA -keysize 2048 -validity 10000
+```
+
+>Recomiendo crear el archivo script.sh y luego ejecutarlo en gitbash asi ./script.sh
+
+ ```sh
+    keytool -genkey -v -noprompt \
+    -alias alias_de_la_aplicacion \
+    -dname "CN=Nombre, OU=Ocupacion, O=Empresa, L=Ciudad, S=Departamento, C=Codigo Zip" \
+    -keystore nombre_almacenamiento_llave.keystore \
+    -storepass clave_almacenamiento_llave \
+    -keypass clave_llave \
+    -keyalg RSA \
+    -keysize 2048 \
+    -validity 10000
+ ```
+
+2. Crear en la ruta  
+
+> *[ruta projecto]*/platforms/android  
+
+El archivo **release-signing.properties**  
+
+Incluir la siguiente configuración:
+
+    > storeFile=../../llave/ahorcado_hibrido.keystore  
+    > storeType=jks  
+    > keyAlias=hibrido  
+    > keyPassword=password  
+    > storePassword=password  
+
+3. Crear el apk usando el modo release, así:
+
+```sh
+cordova build android --release
+```
+
 
 [Node js]:https://nodejs.org/es/
 [Visual Studio Code]:https://code.visualstudio.com/
