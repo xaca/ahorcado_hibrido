@@ -109,7 +109,7 @@ Recuerde que la llave con la cual se firma la aplicación debe ser la misma con 
 
 1. Crear la llave para firmar la aplicación, tener en cuenta los siguientes datos:  
 
-**nombre_almacenamiento_llave.keystore** Nombre del archivo que guardará las llaves  
+> **nombre_almacenamiento_llave.keystore** Nombre del archivo que guardará las llaves  
 **alias_de_la_aplicacion** Nombre corto o apodo de la aplicación  
 **clave_almacenamiento_llave** Clave del almacen  
 **clave_llave** Clave de la llave  
@@ -141,10 +141,10 @@ El archivo **release-signing.properties**
 Incluir la siguiente configuración:
 
     > storeFile=../../llave/ahorcado_hibrido.keystore  
-    > storeType=jks  
-    > keyAlias=hibrido  
-    > keyPassword=password  
-    > storePassword=password  
+    storeType=jks  
+    keyAlias=hibrido  
+    keyPassword=password  
+    storePassword=password  
 
 3. Crear el apk usando el modo release, así:
 
